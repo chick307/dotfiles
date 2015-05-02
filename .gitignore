@@ -1,0 +1,7 @@
+.*
+!.gitignore
+!.gitmodules
+
+/vim/bundle/*
+!/vim/bundle/neobundle.vim
+!/vim/bundle/vim-colors-solarized

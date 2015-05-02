@@ -1,0 +1,3 @@
+vimrc_add() {
+    path_add EXTRA_VIMRC "$1"
+}

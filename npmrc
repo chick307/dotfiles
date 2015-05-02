@@ -1,0 +1,8 @@
+cache=~/.local/var/cache/npm
+editor=vim
+globalignorefile=~/.npmignore
+init-author-email=chick307@gmail.com
+init-author-name=chick307
+init-license=MIT
+init-version=0.0.0
+prefix=~/.local
