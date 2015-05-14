@@ -133,6 +133,7 @@ set mouse=a
 set wildmenu wildmode=list:longest,list:full
 set scrolloff=3
 set noerrorbells visualbell t_vb=
+set nocursorline
 
 " disable IME in normal mode
 autocmd vimrc InsertEnter,CmdwinEnter * set noimdisable
