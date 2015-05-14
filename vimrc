@@ -130,7 +130,7 @@ set hlsearch
 set foldlevel=255
 set wrap breakindent
 set mouse=a
-set wildmenu wildmode=longest,list:full
+set wildmenu wildmode=list:longest,list:full
 
 " disable IME in normal mode
 autocmd vimrc InsertEnter,CmdwinEnter * set noimdisable
