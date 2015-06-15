@@ -32,6 +32,9 @@
 [pull]
     ff = only
 
+[rerere]
+    enabled = true
+
 [include]
     path = ~/.local/etc/gitconfig
 
