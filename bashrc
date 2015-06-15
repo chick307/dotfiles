@@ -72,7 +72,7 @@ readline-peco-history() { declare l=$(peco-history "$READLINE_LINE"); READLINE_L
 
 # ghq
 peco-ghq() { ghq list -p | peco --query "$*"; }
-cdq() { local nwd="`peco-ghq $@`"; [ -n "$nwd" ] && cd $nwd; }
+cdq() { local nwd="`peco-ghq $@`"; [ -n "$nwd" ] && echo ">> cd \"$nwd\"" && cd "$nwd"; }
 
 # load local bashrc
 [ -f "$HOME/.local/etc/bashrc" ] && . "$HOME/.local/etc/bashrc"
