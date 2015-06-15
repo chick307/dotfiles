@@ -46,9 +46,9 @@ case "${OSTYPE}" in
         alias la='ls -G -A'
         ;;
     linux*)
-        alias ls='ls --color=auto'
-        alias ll='ls --color=auto -alF'
-        alias la='ls --color=auto -A'
+        alias ls='ls --color=auto --group-directories-first'
+        alias ll='ls --color=auto --group-directories-first -alF'
+        alias la='ls --color=auto --group-directories-first -A'
         ;;
 esac
 
