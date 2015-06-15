@@ -7,6 +7,8 @@
     co = checkout
     d = diff
     dc = diff --cached
+    f = fetch
+    fp = fetch --prune
     g = log --graph --date=short --format=\"%C(yellow)%h%C(reset) %C(magenta)[%ad]%C(reset)%C(auto)%d%C(reset) %s %C(cyan)@%an%C(reset)\"
     ga = log --graph --all --date=short --format=\"%C(yellow)%h%C(reset) %C(magenta)[%ad]%C(reset)%C(auto)%d%C(reset) %s %C(cyan)@%an%C(reset)\"
     gr = grep -n
