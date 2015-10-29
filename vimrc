@@ -112,6 +112,9 @@ nnoremap <silent> <leader>E :Texplore<C-m>
 " shell
 nnoremap <silent> <leader>b :shell<C-m>
 
+" tab
+command! -nargs=? -complete=file E tabnew <args>
+
 " settings
 set encoding=utf-8 ambiwidth=double " encoding and unicode
 set number ruler laststatus=2 " show line numbers and ruler
