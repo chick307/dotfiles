@@ -72,7 +72,15 @@ readline-peco-history() { declare l=$(peco-history "$READLINE_LINE"); READLINE_L
 
 # ghq
 peco-ghq() { ghq list -p | peco --query "$*"; }
+
+# cd
 cdq() { local nwd="`peco-ghq $@`"; [ -n "$nwd" ] && echo ">> cd \"$nwd\"" && cd "$nwd"; }
+
+# ps
+peco-ps() { ps aux | peco --query "$*" | awk '{ print $2 }'; }
+
+# kill
+killp() { local pid="`peco-ps $@`"; [ -n "$pid" ] && echo ">> kill \"$pid\"" && kill "$pid"; }
 
 # load local bashrc
 [ -f "$HOME/.local/etc/bashrc" ] && . "$HOME/.local/etc/bashrc"
