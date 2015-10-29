@@ -2,7 +2,7 @@
 
 set encoding=utf-8
 scriptencoding utf-8
-let g:mapleader = ","
+let g:mapleader = " "
 if has('vim_starting')
    if &compatible
      set nocompatible
