@@ -17,6 +17,8 @@
     pi = cherry-pick
     st = status
     rmc = rm --cached
+    ra = rebase --abort
+    rc = rebase --continue
 
 [user]
     name = chick307
