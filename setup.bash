@@ -17,6 +17,7 @@ link bash_profile
 link bashrc
 link dircolors
 link direnvrc
+link git-commit-template
 link gitconfig
 link gitignore
 link inputrc
