@@ -213,6 +213,7 @@ if &term =~# "-256color$"
   let g:solarized_termtrans = 1
   colorscheme solarized
 endif
+execute 'set colorcolumn=' . join(range(81, 1000), ',')
 
 let s:local_vimrc = expand('~/.local/etc/vimrc')
 if filereadable(s:local_vimrc)
