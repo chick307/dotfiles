@@ -68,6 +68,14 @@ nnoremap <silent> <leader>gb :Gblame<C-m>
 NeoBundle 'Shougo/unite.vim'
 nnoremap <silent> <leader>t :Unite tab<C-m>
 
+" ctrlp
+NeoBundle 'kien/ctrlp.vim'
+let g:ctrlp_custom_ignore = '\v[\/](\.(git|hg|svn)|bower_components|node_modules)$'
+let g:ctrlp_prompt_mappings = {
+  \ 'AcceptSelection("e")': ['<c-o>'],
+  \ 'AcceptSelection("t")': ['<cr>', '<c-t>'],
+  \ }
+
 " powerline
 NeoBundle 'bling/vim-airline'
 if !exists('g:airline_symbols')
