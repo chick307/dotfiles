@@ -45,6 +45,9 @@
 [rerere]
     enabled = true
 
+[stash]
+    showPatch = true
+
 [include]
     path = ~/.local/etc/gitconfig
 
