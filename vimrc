@@ -27,6 +27,9 @@ NeoBundle 'Shougo/vimproc.vim', {
   \   },
   \ }
 
+" surround
+NeoBundle 'tpope/vim-surround'
+
 " markdown
 NeoBundle 'rcmdnk/vim-markdown'
 " see http://rcmdnk.github.io/blog/2014/10/30/computer-vim-markdown/
