@@ -117,6 +117,8 @@ nnoremap <silent> <leader>b :shell<C-m>
 
 " tab
 command! -nargs=? -complete=file E tabnew <args>
+nnoremap <silent> <C-h> gT
+nnoremap <silent> <C-l> gt
 
 " settings
 set encoding=utf-8 ambiwidth=double " encoding and unicode
