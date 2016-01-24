@@ -65,8 +65,10 @@ let g:vim_indent_cont=2
 
 " git
 NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'junegunn/gv.vim'
 let g:airline#extensions#branch#format = 1
 nnoremap <silent> <leader>gb :Gblame<C-m>
+nnoremap <silent> <leader>gv :GV<C-m>
 
 " unite.vim
 NeoBundle 'Shougo/unite.vim'
