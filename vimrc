@@ -48,6 +48,9 @@ NeoBundle 'leafgarland/typescript-vim'
 NeoBundle 'jason0x43/vim-js-indent'
 let g:typescript_indent_disable = 1
 
+" json
+autocmd vimrc FileType json setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
+
 " yaml
 autocmd vimrc FileType yaml setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 
