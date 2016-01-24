@@ -48,6 +48,9 @@ let g:typescript_indent_disable = 1
 " yaml
 autocmd vimrc FileType yaml setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 
+" shell script
+autocmd vimrc FileType sh setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
+
 " emmet
 NeoBundle 'mattn/emmet-vim'
 let g:user_emmet_mode = 'inv'
