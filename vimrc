@@ -40,6 +40,9 @@ let g:vim_markdown_better_folding = 1
 autocmd vimrc FileType markdown setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 autocmd vimrc FileType markdown setlocal colorcolumn=
 
+" javascript
+NeoBundle 'othree/yajs.vim'
+
 " typescript
 NeoBundle 'leafgarland/typescript-vim'
 NeoBundle 'jason0x43/vim-js-indent'
