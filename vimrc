@@ -38,6 +38,7 @@ let g:vim_markdown_math = 1
 let g:vim_markdown_initial_foldlevel=255
 let g:vim_markdown_better_folding = 1
 autocmd vimrc FileType markdown setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
+autocmd vimrc FileType markdown setlocal colorcolumn=
 
 " typescript
 NeoBundle 'leafgarland/typescript-vim'
