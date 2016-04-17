@@ -33,6 +33,15 @@ NeoBundle 'tpope/vim-surround'
 " word
 NeoBundle 'itchyny/vim-cursorword'
 
+" syntastic
+NeoBundle 'scrooloose/syntastic'
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 0
+nnoremap <silent> <leader>c :SyntasticCheck<CR>
+nnoremap <silent> <leader>C :SyntasticReset<CR>
+
 " markdown
 NeoBundle 'rcmdnk/vim-markdown'
 " see http://rcmdnk.github.io/blog/2014/10/30/computer-vim-markdown/
