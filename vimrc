@@ -53,6 +53,7 @@ let g:typescript_indent_disable = 1
 
 " json
 autocmd vimrc FileType json setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
+autocmd vimrc BufNewFile,BufRead .babelrc setlocal filetype=json
 
 " yaml
 autocmd vimrc FileType yaml setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
