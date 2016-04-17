@@ -74,8 +74,8 @@ autocmd vimrc FileType sh setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=
 NeoBundle 'mattn/emmet-vim'
 let g:user_emmet_mode = 'inv'
 let g:user_emmet_install_global = 0
-autocmd vimrc FileType html,css,markdown,javascript EmmetInstall
-autocmd vimrc FileType html,css,markdown,javascript
+autocmd vimrc FileType css,html,javascript,markdown,scss EmmetInstall
+autocmd vimrc FileType css,html,javascript,markdown,scss
   \ imap <buffer> <C-z> <plug>(emmet-expand-abbr)
 
 " vim script
