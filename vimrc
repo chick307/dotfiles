@@ -101,6 +101,23 @@ let g:ctrlp_prompt_mappings = {
   \ 'AcceptSelection("t")': ['<cr>', '<c-t>'],
   \ }
 
+nnoremap <leader><leader> :call <SID>start_ctrlp()<CR>
+
+func! s:start_ctrlp()
+  if exists('b:ctrlp_user_command')
+    unlet b:ctrlp_user_command
+  endif
+  call system('git rev-parse --is-inside-git-dir')
+  if v:shell_error == 0
+    let b:ctrlp_user_command = ['.git', 'cd %s && git ls-files']
+    execute 'CtrlP'
+  elseif v:shell_error == 128
+    execute 'CtrlPCurFile'
+  else
+    execute 'CtrlP'
+  endif
+endfunc
+
 " powerline
 NeoBundle 'bling/vim-airline'
 if !exists('g:airline_symbols')
