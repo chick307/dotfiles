@@ -53,7 +53,16 @@ let g:typescript_indent_disable = 1
 
 " json
 autocmd vimrc FileType json setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
+autocmd vimrc FileType json nnoremap <buffer> <leader>f :call <sid>json_format()<cr>
 autocmd vimrc BufNewFile,BufRead .babelrc setlocal filetype=json
+
+func! s:json_format()
+  if executable('jq')
+    execute '%!jq .'
+  else
+    throw '"jq" command is required'
+  endif
+endfunc
 
 " yaml
 autocmd vimrc FileType yaml setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
