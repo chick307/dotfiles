@@ -82,5 +82,8 @@ peco-ps() { ps aux | peco --query "$*" | awk '{ print $2 }'; }
 # kill
 killp() { local pid="`peco-ps $@`"; [ -n "$pid" ] && echo ">> kill \"$pid\"" && kill "$pid"; }
 
+# rip
+RIP_PATTERN='$debug'
+
 # load local bashrc
 [ -f "$HOME/.local/etc/bashrc" ] && . "$HOME/.local/etc/bashrc"
