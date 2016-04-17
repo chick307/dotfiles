@@ -58,6 +58,7 @@ NeoBundle 'othree/yajs.vim'
 " typescript
 NeoBundle 'leafgarland/typescript-vim'
 NeoBundle 'jason0x43/vim-js-indent'
+let g:syntastic_typescript_checkers = ['tslint']
 let g:typescript_indent_disable = 1
 
 " json
