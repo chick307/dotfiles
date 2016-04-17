@@ -15,6 +15,7 @@
     gr = grep -n
     ls = ls-files
     pi = cherry-pick
+    pullr = pull --rebase
     pushf = push --force-with-lease
     st = status
     rmc = rm --cached
