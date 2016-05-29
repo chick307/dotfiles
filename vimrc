@@ -31,6 +31,10 @@ let g:syntastic_mode_map = { "mode": "passive" }
 nnoremap <silent> <leader>c :SyntasticCheck<CR>
 nnoremap <silent> <leader>C :SyntasticReset<CR>
 
+" template
+call dein#add('mattn/sonictemplate-vim')
+let g:sonictemplate_vim_template_dir = ['~/.vim/template', '~/.local/etc/vim/template']
+
 " markdown
 call dein#add('rcmdnk/vim-markdown')
 " see http://rcmdnk.github.io/blog/2014/10/30/computer-vim-markdown/
