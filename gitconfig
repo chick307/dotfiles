@@ -29,7 +29,6 @@
 [core]
     editor = vim
     excludesfile = ~/.gitignore
-    excludesfile = ~/.local/etc/gitignore
 
 [commit]
     template = ~/.git-commit-template
