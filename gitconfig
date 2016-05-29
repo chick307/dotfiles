@@ -17,10 +17,10 @@
     pi = cherry-pick
     pullr = pull --rebase
     pushf = push --force-with-lease
-    st = status
-    rmc = rm --cached
     ra = rebase --abort
     rc = rebase --continue
+    rmc = rm --cached
+    st = status
 
 [user]
     name = chick307
