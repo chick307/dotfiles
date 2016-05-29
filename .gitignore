@@ -2,6 +2,5 @@
 !.gitignore
 !.gitmodules
 
-/vim/bundle/*
-!/vim/bundle/neobundle.vim
-!/vim/bundle/vim-colors-solarized
+/vim/dein/*
+!/vim/dein/repos/github.com/Shougo/dein.vim
