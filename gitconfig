@@ -2,6 +2,7 @@
     a = add
     ap = add -p
     br = branch
+    cancel = !sh -c '"$(dirname "$(readlink ~/.gitconfig)")/libexec/git-cancel"'
     ci = commit -v
     cia = commit --amend -v
     co = checkout

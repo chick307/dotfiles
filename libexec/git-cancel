@@ -1,0 +1,20 @@
+#!/bin/sh
+
+DATE=$(date)
+STAGED_CHANGES=$(git status | grep -E "^Changes to be committed:$")
+NOT_STAGED_CHANGES=$(git status | grep -E "^(Changes not staged for commit|Untracked files):$")
+
+if [ -n "$STAGED_CHANGES" ]; then
+  git commit -m "STAGED CHANGES $DATE"
+  if [ -n "$NOT_STAGED_CHANGES" ]; then
+    git add -A
+    git commit -m "NOT STAGED CHANGES $DATE"
+    git reset --hard HEAD~2
+  else
+    git reset --hard HEAD~
+  fi
+elif [ -n "$NOT_STAGED_CHANGES" ]; then
+  git add -A
+  git commit -m "NOT STAGED CHANGES $DATE"
+  git reset --hard HEAD~
+fi
