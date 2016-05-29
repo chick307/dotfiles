@@ -119,6 +119,7 @@ endfunc
 
 " powerline
 call dein#add('vim-airline/vim-airline')
+call dein#add('vim-airline/vim-airline-themes')
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
@@ -131,6 +132,7 @@ let g:airline_symbols.whitespace = 'W'
 let g:airline_symbols.branch = 'B'
 let g:airline_symbols.readonly = 'R'
 let g:airline_symbols.linenr = 'L'
+let g:airline_theme = 'solarized'
 let g:airline_mode_map = {
   \ '__' : '-',
   \ 'n'  : 'N',
