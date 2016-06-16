@@ -59,3 +59,11 @@
 
 [diff]
     compactionHeuristic = true
+
+[pager]
+    diff = $DIFF_HIGHLIGHT | $PAGER
+    log = $DIFF_HIGHLIGHT | $PAGER
+    show = $DIFF_HIGHLIGHT | $PAGER
+
+[interactive]
+    diffFilter = $DIFF_HIGHLIGHT

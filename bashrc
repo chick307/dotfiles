@@ -64,6 +64,8 @@ alias egrep='egrep --color=auto'
 # git
 alias gti=git
 peco-git-refs() { git for-each-ref --format='%(refname)' refs/{heads,tags,remotes} | grep -v '^refs/remotes/.*/HEAD$' | sed -e 's@^refs/\(heads\|remotes\|tags\)/@@' | peco --query "$*"; }
+export DIFF_HIGHLIGHT=$(_which diff-highlight || _which cat)
+[[ ! -x $(_which diff-highlight) && -x $(brew --prefix)/share/git-core/contrib/diff-highlight/diff-highlight ]] && ln -sfn "$(brew --prefix)/share/git-core/contrib/diff-highlight/diff-highlight" ~/.local/bin/ && export DIFF_HIGHLIGHT=$(_which diff-highlight)
 
 # bash completion
 [ -x "$(_which brew)" ] && [ -f "$(brew --prefix)/etc/bash_completion" ] && \
