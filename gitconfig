@@ -56,3 +56,6 @@
 
 [ghq]
     root = ~/.local/src
+
+[diff]
+    compactionHeuristic = true
