@@ -14,6 +14,10 @@ shopt -s checkwinsize
 # editor
 export EDITOR=vim
 
+# pager
+export PAGER=less
+export LESS=-cRS
+
 # lesspipe
 [ -x "$(_which lesspipe)" ] && eval "$(SHELL=/bin/sh lesspipe)"
 
