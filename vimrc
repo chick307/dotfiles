@@ -176,6 +176,8 @@ command! -nargs=? -complete=file E tabnew <args>
 nnoremap <silent> <C-h> gT
 nnoremap <silent> <C-l> gt
 nnoremap <leader>1 :tabfirst<cr>
+nnoremap <silent> <C-t><C-h> :-tabmove<CR>
+nnoremap <silent> <C-t><C-l> :+tabmove<CR>
 
 " settings
 set encoding=utf-8 ambiwidth=double " encoding and unicode
