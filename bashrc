@@ -1,5 +1,7 @@
 _which() { which $@ 2> /dev/null; }
 
+[[ -z $GOPATH ]] && . .profile
+
 # shell
 export HISTSIZE=2000
 export HISTFILESIZE=2000
