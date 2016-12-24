@@ -268,7 +268,7 @@ vnoremap g$ $
 nnoremap <C-[><C-[><C-[> :nohlsearch<C-m>
 
 " colorscheme
-call dein#add('altercation/vim-colors-solarized.git')
+call dein#add('lifepillar/vim-solarized8')
 execute 'set colorcolumn=' . join(range(81, 1000), ',')
 
 let s:local_vimrc = expand('~/.local/etc/vimrc')
@@ -295,5 +295,5 @@ if &term =~# "-256color$"
   set t_Co=256
   let g:solarized_termcolors = 256
   let g:solarized_termtrans = 1
-  colorscheme solarized
+  colorscheme solarized8_dark
 endif
