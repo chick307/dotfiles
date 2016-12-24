@@ -1,2 +1,4 @@
 source ~/.profile
-source ~/.bashrc
+case $- in
+  *i*) source ~/.bashrc ;;
+esac
