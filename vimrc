@@ -207,31 +207,31 @@ autocmd vimrc InsertEnter,CmdwinEnter * set noimdisable
 autocmd vimrc InsertLeave,CmdwinLeave * set imdisable
 
 " completion
-inoremap " ""<Left>
+inoremap " ""<C-g>U<Left>
 inoremap "" ""
 inoremap "<C-h> "<C-h>
-inoremap ' ''<Left>
+inoremap ' ''<C-g>U<Left>
 inoremap '' ''
 inoremap '<C-h> '<C-h>
-inoremap ` ``<Left>
+inoremap ` ``<C-g>U<Left>
 inoremap `` ``
 inoremap `<C-h> `<C-h>
-inoremap ( ()<Left>
-inoremap (; ();<Left><Left>
+inoremap ( ()<C-g>U<Left>
+inoremap (; ();<C-g>U<Left><C-g>U<Left>
 inoremap (;; (;;)
-inoremap )( )(<Left>
+inoremap )( )(<C-g>U<Left>
 inoremap () ()
 inoremap (<C-h> (<C-h>
-inoremap [ []<Left>
-inoremap ][ ][<Left>
+inoremap [ []<C-g>U<Left>
+inoremap ][ ][<C-g>U<Left>
 inoremap [] []
 inoremap [<C-h> [<C-h>
 inoremap [<C-m> [<C-m>]<C-o>O<C-g>u
 inoremap [<C-m><C-i> [<C-m>]<C-o>O<C-g>u
 inoremap [<C-m>; [<C-m>];<C-o>O<C-g>u
 inoremap [;<C-m> [<C-m>];<C-o>O<C-g>u
-inoremap { {}<Left>
-inoremap }{ }{<Left>
+inoremap { {}<C-g>U<Left>
+inoremap }{ }{<C-g>U<Left>
 inoremap {} {}
 inoremap {<C-h> {<C-h>
 inoremap {<C-m> {<C-m>}<C-o>O<C-g>u
