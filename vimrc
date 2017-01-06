@@ -23,13 +23,14 @@ call dein#add('itchyny/vim-cursorword')
 
 " syntastic
 call dein#add('scrooloose/syntastic')
-let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_always_populate_loc_list = 0
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
+let g:syntastic_enable_signs = 1
 let g:syntastic_mode_map = { "mode": "passive" }
-nnoremap <silent> <leader>c :SyntasticCheck<CR>
-nnoremap <silent> <leader>C :SyntasticReset<CR>
+nnoremap <silent> <leader>l :SyntasticCheck<CR>
+nnoremap <silent> <leader>L :SyntasticReset<CR>
 
 " template
 call dein#add('mattn/sonictemplate-vim')
