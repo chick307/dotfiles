@@ -96,6 +96,8 @@ nnoremap <silent> <leader>gv :GV<C-m>
 
 " unite.vim
 call dein#add('Shougo/unite.vim')
+call dein#add('Shougo/unite-outline')
+nnoremap <silent> <leader>o :Unite outline<cr>
 nnoremap <silent> <leader>t :Unite tab<C-m>
 
 " ctrlp
