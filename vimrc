@@ -251,6 +251,8 @@ nnoremap <Right> <Space>
 nnoremap <PageUp> <C-u>
 nnoremap <PageDown> <C-d>
 inoremap <silent> jj <C-[>
+inoremap <Left> <C-g>U<Left>
+inoremap <Right> <C-g>U<Right>
 nnoremap k gk
 nnoremap K gk
 vnoremap K gk
