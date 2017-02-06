@@ -74,7 +74,7 @@ export DIFF_HIGHLIGHT=$(_which diff-highlight || _which cat)
     . "$(brew --prefix)/etc/bash_completion"
 
 # history
-bind -x '"\C-r": readline-peco-history'
+[[ -n $SSH_CONNECTION && -z $SSH_TTY ]] || bind -x '"\C-r": readline-peco-history'
 peco-history() { HISTTIMEFORMAT= history | sort -k1,1nr | perl -ne 'BEGIN { my @lines = (); } s/^\s*\d+\s*//; $in=$_; if (!(grep {$in eq $_} @lines)) { push(@lines, $in); print $in; }' | peco --query "$READLINE_LINE"; }
 readline-peco-history() { declare l=$(peco-history "$READLINE_LINE"); READLINE_LINE="$l"; READLINE_POINT=${#l}; }
 
