@@ -234,6 +234,7 @@ inoremap [<C-m><C-i> [<C-m>]<C-o>O<C-g>u
 inoremap [<C-m>; [<C-m>];<C-o>O<C-g>u
 inoremap [;<C-m> [<C-m>];<C-o>O<C-g>u
 inoremap { {}<C-g>U<Left>
+inoremap {<Space> {<Space><Space>}<C-g>U<Left><C-g>U<Left>
 inoremap }{ }{<C-g>U<Left>
 inoremap {} {}
 inoremap {<C-h> {<C-h>
