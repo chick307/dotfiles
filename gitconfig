@@ -20,7 +20,7 @@
     pushf = push --force-with-lease
     ra = rebase --abort
     rc = rebase --continue
-    ri = rebase -i
+    ri = rebase -i --keep-empty
     rmc = rm --cached
     st = status
 
