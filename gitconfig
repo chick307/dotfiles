@@ -5,6 +5,7 @@
     cancel = !sh -c '"$(dirname "$(readlink ~/.gitconfig)")/libexec/git-cancel"'
     ci = commit -v
     cia = commit --amend -v
+    cian = commit --amend --date=now -C HEAD
     co = checkout
     d = diff
     dc = diff --cached
