@@ -94,6 +94,7 @@ call dein#add('junegunn/gv.vim')
 let g:airline#extensions#branch#format = 1
 nnoremap <silent> <leader>gb :Gblame<C-m>
 nnoremap <silent> <leader>gv :GV<C-m>
+command! -nargs=0 Tig tab terminal ++close tig
 
 " unite.vim
 call dein#add('Shougo/unite.vim')
