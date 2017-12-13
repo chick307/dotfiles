@@ -183,6 +183,8 @@ nnoremap <silent> <C-l> gt
 nnoremap <leader>1 :tabfirst<cr>
 nnoremap <silent> <C-t><C-h> :-tabmove<CR>
 nnoremap <silent> <C-t><C-l> :+tabmove<CR>
+tnoremap <silent> <C-h> <C-w>:tabprevious<CR>
+tnoremap <silent> <C-l> <C-w>:tabnext<CR>
 
 " settings
 set encoding=utf-8 ambiwidth=double " encoding and unicode
