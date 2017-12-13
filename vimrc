@@ -174,7 +174,7 @@ nnoremap <silent> <leader>e :Explore<C-m>
 nnoremap <silent> <leader>E :Texplore<C-m>
 
 " shell
-nnoremap <silent> <leader>b :shell<C-m>
+nnoremap <silent> <leader>b :terminal ++close<C-m>
 
 " tab
 command! -nargs=? -complete=file E tabnew <args>
