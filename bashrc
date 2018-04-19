@@ -32,17 +32,14 @@ fi
 update-ps1() { export PS1='\h:\w $ '; }
 export PROMPT_COMMAND="update-ps1"
 
+# powerline
+if [[ "$(_which powerline-shell)" ]]; then
+    update-ps1-powerline() { export PS1="$(powerline-shell)"; }
+    export PROMPT_COMMAND="update-ps1-powerline"
+fi
+
 # direnv
 [ -x "$(_which direnv)" ] && eval "$(direnv hook bash)"
-
-# powerline
-if [ -x "$(_which powerline-shell.py)" -o -x "$HOME/.local/bin/powerline-shell.py" ]; then
-    export PROMPT_COMMAND="_exit_code=\$?; $PROMPT_COMMAND; update-ps1-powerline \$_exit_code"
-    export POWERLINE_SHELL_OPTS="--shell bash --mode flat --cwd-max-depth 4"
-    update-ps1-powerline() {
-        export PS1="$(powerline-shell.py $POWERLINE_SHELL_OPTS $1 2> /dev/null)"
-    }
-fi
 
 # ls
 case "${OSTYPE}" in
