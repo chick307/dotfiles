@@ -174,7 +174,11 @@ nnoremap <silent> <leader>e :Explore<C-m>
 nnoremap <silent> <leader>E :Texplore<C-m>
 
 " shell
-nnoremap <silent> <leader>b :terminal ++close<C-m>
+nnoremap <silent> <leader>b :call <SID>open_shell()<C-m>
+func! s:open_shell()
+  terminal ++close
+  setlocal ambiwidth=single
+endfunc
 
 " tab
 command! -nargs=? -complete=file E tabnew <args>
