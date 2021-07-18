@@ -9,13 +9,12 @@
 ```sh
 $ git clone git@github.com:chick307/dotfiles.git ~/.local/src/github.com/chick307/dotfiles
 $ cd ~/.local/src/github.com/chick307/dotfiles
-$ ./setup.bash
-$ . ~/.bash_profile
+$ bash ./setup.bash
 ```
 
 絶対パスでシンボリックリンクを作る。これ以外の場所に `git clone` しても問題ない。
 
-`~/.local` 以下に `bin` `etc` `src` などのディレクトリを作る構成にしている。 `configure` を使ってインストールする場合は `./configure prefix=~/.local` としてもいい。 `ghq` の `root` は `~/.local/src` にしてある。
+`~/.local` 以下に `bin` `etc` `src` などのディレクトリを作る構成にしている。 `configure` を使ってインストールする場合は `./configure prefix=~/.local` としてもいい。
 
 ## bash
 
@@ -25,15 +24,15 @@ $ . ~/.bash_profile
 
 `~/.direnvrc` がこのレポジトリで管理される。
 
-`.envrc` は `~/.gitignore` `~/.npmignore` に指定されいる。
+`.envrc` は `~/.gitignore` `~/.npmignore` に指定されている。
 
-## powerline-shell.py
+## powerline-shell
 
-`powerline-shell.py` にパスが通っているとそれを使う。渡される引数は `POWERLINE_SHELL_OPTS` 変数を通して変更できる。Poweline 用のフォントがインストールされているなら `~/.local/etc/bashrc` のなかで `POWERLINE_SHELL_OPTS` を編集し `--mode flat` 以外を渡すことができる。
+`powerline-shell` コマンドが存在すれば、それを使う。
 
 ## git
 
-`~/.gitconfig` `~/.gitignore` がこのレポジトリで管理される。ローカルのみの設定は `~/.local/etc/gitconfig` と `~/.local/etc/gitignore` に書くと読み込まれる。
+`~/.gitconfig` `~/.gitignore` を管理する。ローカルのみの設定は `~/.local/etc/gitconfig` に書くと読み込まれる。
 
 Git は 2.0 以上でないと `git pull` の時 `--ff-only` が自動で指定されず `brew update` などで問題になる場合がある。 `apt-get` や `yum` で入る `git` は古いので注意。
 
@@ -56,6 +55,12 @@ Git は 2.0 以上でないと `git pull` の時 `--ff-only` が自動で指定�
 `prefix` は `~/.local/opt/npm` に設定され、 `bin` にパスが通される。 `npm i -g` でインストールされたものはそこに置かれる。
 
 勝手にパスの `~` を展開したり、シンボリックリンクを置き換えたりされて面倒くさい。
+
+## ghq
+
+`ghq.root` は `~/.local/src` に設定される。
+
+`ghq` で管理されるリポジトリを `peco` で選び `cd` する `cdq` 関数が定義される。
 
 ## その他
 
