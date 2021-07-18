@@ -311,5 +311,5 @@ if &term =~# "-256color$"
   let g:solarized_termtrans = 1
   autocmd vimrc ColorScheme * hi! Comment ctermfg=244 ctermbg=NONE cterm=NONE
   autocmd vimrc ColorScheme * hi! def link gitcommitComment Comment
-  colorscheme solarized8_dark_flat
+  colorscheme solarized8_flat
 endif
