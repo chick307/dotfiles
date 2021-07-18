@@ -56,6 +56,10 @@ Git は 2.0 以上でないと `git pull` の時 `--ff-only` が自動で指定�
 
 勝手にパスの `~` を展開したり、シンボリックリンクを置き換えたりされて面倒くさい。
 
+## pip
+
+`PYTHONUSERBASE` は `~/.local/opt/pip` に設定され、 `bin` にパスが通される。 `pip install --user` でインストールされたものはそこに置かれる。
+
 ## ghq
 
 `ghq.root` は `~/.local/src` に設定される。

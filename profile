@@ -3,6 +3,9 @@ _which() { which $@ 2> /dev/null; }
 # go
 export GOPATH="$HOME/.local/opt/go"
 
+# python
+export PYTHONUSERBASE=$HOME/.local/opt/pip
+
 # homebrew
 homebrew_prefix="/usr/local"
 if [ -x "$(_which apt-get || _which yum)" ]; then
@@ -14,6 +17,7 @@ export MANPATH="$homebrew_prefix/share/man:$MANPATH"
 # path
 export PATH="$HOME/.local/opt/go/bin:$PATH"
 export PATH="$HOME/.local/opt/npm/bin:$PATH"
+export PATH="$HOME/.local/opt/pip/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 
 # manpath
