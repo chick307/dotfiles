@@ -10,6 +10,9 @@ augroup vimrc
   autocmd!
 augroup END
 
+" auto-pairs
+call dein#add('jiangmiao/auto-pairs')
+
 " surround
 call dein#add('tpope/vim-surround')
 
@@ -207,40 +210,6 @@ set nocursorline
 " disable IME in normal mode
 autocmd vimrc InsertEnter,CmdwinEnter * set noimdisable
 autocmd vimrc InsertLeave,CmdwinLeave * set imdisable
-
-" completion
-inoremap " ""<C-g>U<Left>
-inoremap "" ""
-inoremap "<C-h> "<C-h>
-inoremap ' ''<C-g>U<Left>
-inoremap '' ''
-inoremap '<C-h> '<C-h>
-inoremap ` ``<C-g>U<Left>
-inoremap `` ``
-inoremap `<C-h> `<C-h>
-inoremap ( ()<C-g>U<Left>
-inoremap (; ();<C-g>U<Left><C-g>U<Left>
-inoremap (;; (;;)
-inoremap )( )(<C-g>U<Left>
-inoremap () ()
-inoremap (<C-h> (<C-h>
-inoremap [ []<C-g>U<Left>
-inoremap ][ ][<C-g>U<Left>
-inoremap [] []
-inoremap [<C-h> [<C-h>
-inoremap [<C-m> [<C-m>]<C-o>O<C-g>u
-inoremap [<C-m><C-i> [<C-m>]<C-o>O<C-g>u
-inoremap [<C-m>; [<C-m>];<C-o>O<C-g>u
-inoremap [;<C-m> [<C-m>];<C-o>O<C-g>u
-inoremap { {}<C-g>U<Left>
-inoremap {<Space> {<Space><Space>}<C-g>U<Left><C-g>U<Left>
-inoremap }{ }{<C-g>U<Left>
-inoremap {} {}
-inoremap {<C-h> {<C-h>
-inoremap {<C-m> {<C-m>}<C-o>O<C-g>u
-inoremap {<C-m><C-i> {<C-m>}<C-o>O<C-g>u
-inoremap {<C-m>; {<C-m>};<C-o>O<C-g>u
-inoremap {;<C-m> {<C-m>};<C-o>O<C-g>u
 
 " mapping
 nnoremap <Up> <C-y>
