@@ -1,6 +1,7 @@
 [alias]
     a = add
     ap = add -p
+    an = add -N
     br = branch
     cancel = !sh -c '"$(dirname "$(readlink ~/.gitconfig)")/libexec/git-cancel"'
     ci = commit -v
@@ -19,11 +20,16 @@
     pi = cherry-pick
     pullr = pull --rebase
     pushf = push --force-with-lease
+    pushu = push --set-upstream
     ra = rebase --abort
     rc = rebase --continue
     ri = rebase -i --keep-empty
     rmc = rm --cached
+    rs = restore
+    rss = restore --staged
     st = status
+    sw = switch
+    swc = switch -c
 
 [user]
     name = chick307
