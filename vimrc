@@ -3,14 +3,9 @@
 set encoding=utf-8
 scriptencoding utf-8
 let g:mapleader = " "
-if &compatible
- set nocompatible
-endif
 set runtimepath^=~/.vim/dein/repos/github.com/Shougo/dein.vim
 call dein#begin(expand('~/.vim/dein'))
-call dein#add('Shougo/dein.vim')
 call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
-filetype off
 augroup vimrc
   autocmd!
 augroup END
@@ -79,10 +74,6 @@ autocmd vimrc FileType sh setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=
 " emmet
 call dein#add('mattn/emmet-vim')
 let g:user_emmet_mode = 'inv'
-let g:user_emmet_install_global = 0
-autocmd vimrc FileType css,html,javascript,markdown,scss EmmetInstall
-autocmd vimrc FileType css,html,javascript,markdown,scss
-  \ imap <buffer> <C-z> <plug>(emmet-expand-abbr)
 
 " vim script
 autocmd vimrc FileType vim setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
@@ -304,12 +295,8 @@ if dein#check_install()
 endif
 
 " solarized
-if &term =~# "-256color$"
-  set background=dark
-  set t_Co=256
-  let g:solarized_termcolors = 256
-  let g:solarized_termtrans = 1
-  autocmd vimrc ColorScheme * hi! Comment ctermfg=244 ctermbg=NONE cterm=NONE
-  autocmd vimrc ColorScheme * hi! def link gitcommitComment Comment
-  colorscheme solarized8_flat
-endif
+set background=dark
+let g:solarized_termtrans = 1
+autocmd vimrc ColorScheme solarized8 hi! Comment ctermfg=244 ctermbg=NONE cterm=NONE
+autocmd vimrc ColorScheme solarized8 hi! def link gitcommitComment Comment
+colorscheme solarized8
