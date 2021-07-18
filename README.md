@@ -15,7 +15,7 @@ $ . ~/.bash_profile
 
 絶対パスでシンボリックリンクを作る。これ以外の場所に `git clone` しても問題ない。
 
-`~/.local` 以下に `bin` `etc` `src` などのディレクトリを作る構成にしている。 `GOPATH` も `~/.local` になっている。`configure` を使ってインストールする場合は `./configure prefix=~/.local` としてもいい。 `ghq` の `root` は `~/.local/src` にしてある。
+`~/.local` 以下に `bin` `etc` `src` などのディレクトリを作る構成にしている。 `configure` を使ってインストールする場合は `./configure prefix=~/.local` としてもいい。 `ghq` の `root` は `~/.local/src` にしてある。
 
 ## bash
 
@@ -44,6 +44,10 @@ Git は 2.0 以上でないと `git pull` の時 `--ff-only` が自動で指定�
 `direnv` 用に `vimrc_add` 関数が用意されている。 `.envrc` のなかで `vimrc_add "$PWD/.local.vimrc"` とするとそのディレクトリの `.local.vimrc` を読み込む。 それ以外の名前でも有効だが `~/.gitignore` や `~/.npmingnore` に指定してあるので、特に理由がなければ `.local.vimrc` という名前を使うのが簡単。
 
 きちんと最新の Vim をインストールしないと問題が起こる。 `apt-get` や `yum` で入る `vim` は古いので注意。
+
+## go
+
+`GOPATH` が `~/.local/opt/go` に設定される。 `~/.local/opt/go/bin` にパスが通っているため、 `go get` でコマンドをインストールできる。
 
 ## npm
 

@@ -1,7 +1,7 @@
 _which() { which $@ 2> /dev/null; }
 
 # go
-export GOPATH="$HOME/.local"
+export GOPATH="$HOME/.local/opt/go"
 
 # homebrew
 homebrew_prefix="/usr/local"
@@ -12,6 +12,7 @@ export PATH="$homebrew_prefix/bin:$homebrew_prefix/sbin:$PATH"
 export MANPATH="$homebrew_prefix/share/man:$MANPATH"
 
 # path
+export PATH="$HOME/.local/opt/go/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 
 # manpath
