@@ -26,3 +26,5 @@ link npmrc
 link profile
 link vimrc
 link_dir vim
+link zshenv
+link zshrc

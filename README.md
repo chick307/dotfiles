@@ -66,6 +66,10 @@ Git は 2.0 以上でないと `git pull` の時 `--ff-only` が自動で指定�
 
 `ghq` で管理されるリポジトリを `peco` で選び `cd` する `cdq` 関数が定義される。
 
+## zsh
+
+`~/.zshenv` `~/.zshrc` を管理する。ローカルの設定は `~/.local/etc/zshenv` `~/.local/etc/zshrc`
+
 ## その他
 
 `~/.inputrc` `~/.dircolors` がこのレポジトリで管理される。
