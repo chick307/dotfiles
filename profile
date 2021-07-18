@@ -13,6 +13,7 @@ export MANPATH="$homebrew_prefix/share/man:$MANPATH"
 
 # path
 export PATH="$HOME/.local/opt/go/bin:$PATH"
+export PATH="$HOME/.local/opt/npm/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 
 # manpath
