@@ -19,17 +19,6 @@ call dein#add('tpope/vim-surround')
 " word
 call dein#add('itchyny/vim-cursorword')
 
-" syntastic
-call dein#add('scrooloose/syntastic')
-let g:syntastic_always_populate_loc_list = 0
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 0
-let g:syntastic_enable_signs = 1
-let g:syntastic_mode_map = { "mode": "passive" }
-nnoremap <silent> <leader>l :SyntasticCheck<CR>
-nnoremap <silent> <leader>L :SyntasticReset<CR>
-
 " template
 call dein#add('mattn/sonictemplate-vim')
 let g:sonictemplate_vim_template_dir = ['~/.vim/template', '~/.local/etc/vim/template']
@@ -51,7 +40,6 @@ command! -nargs=* -complete=file Node terminal ++close node <args>
 " typescript
 call dein#add('leafgarland/typescript-vim')
 call dein#add('jason0x43/vim-js-indent')
-let g:syntastic_typescript_checkers = ['tslint']
 let g:typescript_indent_disable = 1
 
 " json
