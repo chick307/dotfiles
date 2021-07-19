@@ -46,7 +46,6 @@ autocmd vimrc FileType markdown setlocal colorcolumn=
 
 " javascript
 call dein#add('othree/yajs.vim')
-autocmd vimrc BufNewFile,BufRead gulpfile.js setlocal filetype=gulpfile.javascript
 command! -nargs=* -complete=file Node terminal ++close node <args>
 
 " typescript
