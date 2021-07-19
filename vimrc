@@ -23,6 +23,25 @@ call dein#add('itchyny/vim-cursorword')
 call dein#add('mattn/sonictemplate-vim')
 let g:sonictemplate_vim_template_dir = ['~/.vim/template', '~/.local/etc/vim/template']
 
+" lsp
+call dein#add('prabirshrestha/vim-lsp')
+call dein#add('mattn/vim-lsp-settings')
+let g:lsp_diagnostics_echo_cursor = 1
+let g:lsp_document_code_action_signs_enabled = 0
+nmap <leader>a <plug>(lsp-code-action)
+nmap <leader>d <plug>(lsp-document-diagnostics)
+nmap 1f <plug>(lsp-document-format)
+vmap 1f <plug>(lsp-document-format)
+nmap 1r <plug>(lsp-rename)
+nmap gd :sp<cr><plug>(lsp-definition)
+nmap gi :sp<cr><plug>(lsp-implementation)
+nmap gr :sp<cr><plug>(lsp-references)
+nmap gt :sp<cr><plug>(lsp-type-definition)
+nmap ]] <plug>(lsp-next-diagnostic)
+nmap [[ <plug>(lsp-previous-diagnostic)
+nmap <leader>h <plug>(lsp-hover)
+autocmd vimrc User lsp_buffer_enabled setlocal signcolumn=yes
+
 " markdown
 call dein#add('rcmdnk/vim-markdown')
 " see http://rcmdnk.github.io/blog/2014/10/30/computer-vim-markdown/
