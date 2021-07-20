@@ -170,13 +170,13 @@ nnoremap <silent> <leader>E :Texplore<C-m>
 nnoremap <silent> <leader>b :call <SID>open_shell()<C-m>
 func! s:open_shell()
   terminal ++close
-  setlocal ambiwidth=single
 endfunc
 
 " tab
 command! -nargs=? -complete=file E tabnew <args>
 nnoremap <silent> <C-h> gT
 nnoremap <silent> <C-l> gt
+autocmd vimrc FileType netrw nnoremap <buffer> <silent> <C-l> gt
 nnoremap <leader>1 :tabfirst<cr>
 nnoremap <silent> <C-t><C-h> :-tabmove<CR>
 nnoremap <silent> <C-t><C-l> :+tabmove<CR>
@@ -184,7 +184,7 @@ tnoremap <silent> <C-h> <C-w>:tabprevious<CR>
 tnoremap <silent> <C-l> <C-w>:tabnext<CR>
 
 " settings
-set encoding=utf-8 ambiwidth=double " encoding and unicode
+set ambiwidth=double " encoding and unicode
 set number ruler laststatus=2 " show line numbers and ruler
 set showmatch
 set expandtab tabstop=4 softtabstop=4 shiftwidth=4
@@ -205,6 +205,7 @@ set wildmenu wildmode=list:longest,list:full
 set scrolloff=3
 set noerrorbells visualbell t_vb=
 set nocursorline
+set colorcolumn=121
 
 " disable IME in normal mode
 autocmd vimrc InsertEnter,CmdwinEnter * set noimdisable
@@ -242,7 +243,6 @@ nnoremap <C-[><C-[><C-[> :nohlsearch<C-m>
 
 " colorscheme
 call dein#add('lifepillar/vim-solarized8')
-execute 'set colorcolumn=' . join(range(81, 1000), ',')
 
 let s:local_vimrc = expand('~/.local/etc/vimrc')
 if filereadable(s:local_vimrc)
