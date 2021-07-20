@@ -44,6 +44,15 @@ Git は 2.0 以上でないと `git pull` の時 `--ff-only` が自動で指定�
 
 きちんと最新の Vim をインストールしないと問題が起こる。 `apt-get` や `yum` で入る `vim` は古いので注意。
 
+powerline のフォントを使っている場合 `~/.local/etc/vimrc` に、
+
+```vim
+let g:airline_left_sep = "\uE0B0"
+let g:airline_left_alt_sep = "\uE0B1"
+```
+
+と書いておく。
+
 ## go
 
 `GOPATH` が `~/.local/opt/go` に設定される。 `~/.local/opt/go/bin` にパスが通っているため、 `go get` でコマンドをインストールできる。

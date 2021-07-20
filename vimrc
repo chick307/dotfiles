@@ -10,6 +10,21 @@ augroup vimrc
   autocmd!
 augroup END
 
+" airline
+call dein#add('vim-airline/vim-airline')
+call dein#add('vim-airline/vim-airline-themes')
+let g:airline_powerline_fonts = 0
+let g:airline_symbols = {}
+let g:airline_symbols_ascii = 1
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_theme = 'solarized'
+let g:airline_mode_map = {}
+let g:airline_section_z = 'L%l/%L:%v'
+let g:airline#extensions#branch#format = 2
+
 " asynccomplete
 call dein#add('prabirshrestha/asyncomplete.vim')
 
@@ -45,6 +60,10 @@ nmap ]] <plug>(lsp-next-diagnostic)
 nmap [[ <plug>(lsp-previous-diagnostic)
 nmap <leader>h <plug>(lsp-hover)
 autocmd vimrc User lsp_buffer_enabled setlocal signcolumn=yes omnifunc=lsp#complete
+let g:airline#extensions#lsp#enabled = 1
+let g:airline#extensions#lsp#show_line_numbers = 0
+let g:airline#extensions#lsp#error_symbol = 'E '
+let g:airline#extensions#lsp#warning_symbol = 'W '
 
 " markdown
 call dein#add('rcmdnk/vim-markdown')
@@ -130,36 +149,6 @@ func! s:start_ctrlp()
     execute 'CtrlP'
   endif
 endfunc
-
-" powerline
-call dein#add('vim-airline/vim-airline')
-call dein#add('vim-airline/vim-airline-themes')
-if !exists('g:airline_symbols')
-  let g:airline_symbols = {}
-endif
-let g:airline_left_sep = ''
-let g:airline_left_alt_sep = ''
-let g:airline_right_sep = ''
-let g:airline_right_alt_sep = ''
-let g:airline_symbols.paste = 'P'
-let g:airline_symbols.whitespace = 'W'
-let g:airline_symbols.branch = 'B'
-let g:airline_symbols.readonly = 'R'
-let g:airline_symbols.linenr = 'L'
-let g:airline_theme = 'solarized'
-let g:airline_mode_map = {
-  \ '__' : '-',
-  \ 'n'  : 'N',
-  \ 'i'  : 'I',
-  \ 'R'  : 'R',
-  \ 'c'  : 'C',
-  \ 'v'  : 'V',
-  \ 'V'  : 'V',
-  \ '' : 'V',
-  \ 's'  : 'S',
-  \ 'S'  : 'S',
-  \ '' : 'S',
-  \ }
 
 " quickrun
 call dein#add('thinca/vim-quickrun')
