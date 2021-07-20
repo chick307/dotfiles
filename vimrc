@@ -10,6 +10,9 @@ augroup vimrc
   autocmd!
 augroup END
 
+" asynccomplete
+call dein#add('prabirshrestha/asyncomplete.vim')
+
 " auto-pairs
 call dein#add('jiangmiao/auto-pairs')
 
@@ -26,6 +29,7 @@ let g:sonictemplate_vim_template_dir = ['~/.vim/template', '~/.local/etc/vim/tem
 " lsp
 call dein#add('prabirshrestha/vim-lsp')
 call dein#add('mattn/vim-lsp-settings')
+call dein#add('prabirshrestha/asyncomplete-lsp.vim')
 let g:lsp_diagnostics_echo_cursor = 1
 let g:lsp_document_code_action_signs_enabled = 0
 nmap <leader>a <plug>(lsp-code-action)
@@ -40,7 +44,7 @@ nmap gt :sp<cr><plug>(lsp-type-definition)
 nmap ]] <plug>(lsp-next-diagnostic)
 nmap [[ <plug>(lsp-previous-diagnostic)
 nmap <leader>h <plug>(lsp-hover)
-autocmd vimrc User lsp_buffer_enabled setlocal signcolumn=yes
+autocmd vimrc User lsp_buffer_enabled setlocal signcolumn=yes omnifunc=lsp#complete
 
 " markdown
 call dein#add('rcmdnk/vim-markdown')
