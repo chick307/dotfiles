@@ -38,7 +38,13 @@ call dein#add('tpope/vim-dispatch')
 call dein#add('tpope/vim-repeat')
 
 " surround
-call dein#add('tpope/vim-surround', { depends: ['tpope/vim-repeat'] })
+call dein#add('tpope/vim-surround', { 'depends': ['tpope/vim-repeat'] })
+
+" textobj-comment
+call dein#add('glts/vim-textobj-comment', { 'depends': ['kana/vim-textobj-user'] })
+
+" textobj-user
+call dein#add('kana/vim-textobj-user')
 
 " word
 call dein#add('itchyny/vim-cursorword')
