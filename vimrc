@@ -44,6 +44,13 @@ call dein#add('itchyny/vim-cursorword')
 call dein#add('mattn/sonictemplate-vim')
 let g:sonictemplate_vim_template_dir = ['~/.vim/template', '~/.local/etc/vim/template']
 
+" test
+call dein#add('vim-test/vim-test')
+let g:test#strategy = 'dispatch'
+nnoremap <silent> <leader>ta :TestSuite<cr>
+nnoremap <silent> <leader>tf :TestFile<cr>
+nnoremap <silent> <leader>tt :TestNearest<cr>
+
 " lsp
 call dein#add('prabirshrestha/vim-lsp')
 call dein#add('mattn/vim-lsp-settings')
