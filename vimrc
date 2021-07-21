@@ -34,6 +34,10 @@ call dein#add('jiangmiao/auto-pairs')
 " dispatch
 call dein#add('tpope/vim-dispatch')
 
+" highlightedyank
+call dein#add('machakann/vim-highlightedyank')
+let g:highlightedyank_highlight_duration = 100
+
 " repeat
 call dein#add('tpope/vim-repeat')
 
