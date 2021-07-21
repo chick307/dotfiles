@@ -40,9 +40,10 @@ call dein#add('tpope/vim-surround')
 " word
 call dein#add('itchyny/vim-cursorword')
 
-" template
+" sonictemplate
 call dein#add('mattn/sonictemplate-vim')
 let g:sonictemplate_vim_template_dir = ['~/.vim/template', '~/.local/etc/vim/template']
+let g:sonictemplate_postfix_key = '<c-k>'
 
 " test
 call dein#add('vim-test/vim-test')
