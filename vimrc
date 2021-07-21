@@ -130,12 +130,6 @@ nnoremap <silent> <leader>gb :Gblame<C-m>
 nnoremap <silent> <leader>gv :GV<C-m>
 command! -nargs=0 Tig tab terminal ++close tig
 
-" unite.vim
-call dein#add('Shougo/unite.vim')
-call dein#add('Shougo/unite-outline')
-nnoremap <silent> <leader>o :Unite outline<cr>
-nnoremap <silent> <leader>t :Unite tab<C-m>
-
 " ctrlp
 call dein#add('kien/ctrlp.vim')
 let g:ctrlp_custom_ignore = '\v[\/](\.(git|hg|svn)|bower_components|node_modules)$'
