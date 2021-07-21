@@ -34,8 +34,11 @@ call dein#add('jiangmiao/auto-pairs')
 " dispatch
 call dein#add('tpope/vim-dispatch')
 
+" repeat
+call dein#add('tpope/vim-repeat')
+
 " surround
-call dein#add('tpope/vim-surround')
+call dein#add('tpope/vim-surround', { depends: ['tpope/vim-repeat'] })
 
 " word
 call dein#add('itchyny/vim-cursorword')
