@@ -88,11 +88,13 @@ autocmd vimrc FileType markdown setlocal colorcolumn=
 
 " javascript
 call dein#add('othree/yajs.vim')
+call dein#add('othree/es.next.syntax.vim')
+call dein#add('jason0x43/vim-js-indent')
+let g:lsp_settings_filetype_javascript = 0
 command! -nargs=* -complete=file Node terminal ++close node <args>
 
 " typescript
 call dein#add('leafgarland/typescript-vim')
-call dein#add('jason0x43/vim-js-indent')
 let g:typescript_indent_disable = 1
 
 " json
