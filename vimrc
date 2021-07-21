@@ -31,6 +31,9 @@ call dein#add('prabirshrestha/asyncomplete.vim')
 " auto-pairs
 call dein#add('jiangmiao/auto-pairs')
 
+" dispatch
+call dein#add('tpope/vim-dispatch')
+
 " surround
 call dein#add('tpope/vim-surround')
 
