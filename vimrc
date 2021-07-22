@@ -231,15 +231,14 @@ autocmd vimrc InsertEnter,CmdwinEnter * set noimdisable
 autocmd vimrc InsertLeave,CmdwinLeave * set imdisable
 
 " mapping
-nnoremap <Up> <C-y>
-nnoremap <Down> <C-e>
-nnoremap <Left> <C-h>
-nnoremap <Right> <Space>
-nnoremap <PageUp> <C-u>
-nnoremap <PageDown> <C-d>
-inoremap <silent> jj <C-[>
-inoremap <Left> <C-g>U<Left>
-inoremap <Right> <C-g>U<Right>
+nnoremap <up> <c-y>
+nnoremap <down> <c-e>
+nnoremap <left> <c-h>
+nnoremap <right> <space>
+nnoremap <pageup> <c-u>
+nnoremap <pagedown> <c-d>
+inoremap <left> <c-g>u<left>
+inoremap <right> <c-g>u<right>
 nnoremap k gk
 nnoremap K gk
 vnoremap K gk
@@ -258,7 +257,9 @@ nnoremap g0 0
 nnoremap g$ $
 vnoremap g0 0
 vnoremap g$ $
-nnoremap <C-[><C-[><C-[> :nohlsearch<C-m>
+nnoremap gF gf
+nnoremap <silent> gf :sp<cr>gf
+nnoremap <c-[><c-[><c-[> :nohlsearch<cr>
 
 " colorscheme
 call dein#add('lifepillar/vim-solarized8')
