@@ -39,6 +39,9 @@
     editor = vim
     excludesfile = ~/.gitignore
 
+[init]
+    defaultBranch = main
+
 [commit]
     template = ~/.git-commit-template
 
