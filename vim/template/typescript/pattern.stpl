@@ -1,0 +1,76 @@
+\(\S\+\)\.const$
+	const {{$1}} = {{_cursor_}};
+
+\(\S\+\)\.let$
+	let {{$1}} = {{_cursor_}};
+
+\(\S\+\)\.type$
+	type {{$1}} = {{_cursor_}};
+
+^\s*\zs\%(\/\/\s*\)\?\%(\cTODO\C\s*\)\?desc\%(ribe\)\?\s\+\(\S.*\)$
+	describe('{{$1}}', () => {
+		{{_cursor_}}
+	});
+
+^\s*\zs\%(\/\/\s*\)\?\%(\cTODO\C\s*\)\?desc\%(ribe\)\?\s*$
+	describe('{{_cursor_}}', () => {
+	});
+
+^\s*\zs\%(\/\/\s*\)\?\%(\cTODO\C\s*\)\?test\s\+\(\S.*\)$
+	test('{{$1}}', () => {
+		{{_cursor_}}
+	});
+
+^\s*\zs\%(\/\/\s*\)\?\%(\cTODO\C\s*\)\?test\s*$
+	test('{{_cursor_}}', () => {
+	});
+
+^\s*\zs\%(\/\/\s*\)\?\%(\cTODO\C\s*\)\?testa\%(sync\)\s\+\(\S.*\)$
+	test('{{$1}}', async () => {
+		{{_cursor_}}
+	});
+
+^\s*\zs\%(\/\/\s*\)\?\%(\cTODO\C\s*\)\?testa\%(sync\)\?$
+	test('{{_cursor_}}', async () => {
+	});
+
+^\s*\zs\%(\/\/\s*\)\?\%(\cTODO\C\s*\)\?after$
+	after(() => {
+		{{_cursor_}}
+	});
+
+^\s*\zs\%(\/\/\s*\)\?\%(\cTODO\C\s*\)\?aftera\%(sync\)\?$
+	after(async () => {
+		{{_cursor_}}
+	});
+
+^\s*\zs\%(\/\/\s*\)\?\%(\cTODO\C\s*\)\?after\cE\%(ach\)\?$
+	afterEach(() => {
+		{{_cursor_}}
+	});
+
+^\s*\zs\%(\/\/\s*\)\?\%(\cTODO\C\s*\)\?after\cE\%(ach\)\?a\%(sync\)\?$
+	afterEach(async () => {
+		{{_cursor_}}
+	});
+
+^\s*\zs\%(\/\/\s*\)\?\%(\cTODO\C\s*\)\?before$
+	before(() => {
+		{{_cursor_}}
+	});
+
+^\s*\zs\%(\/\/\s*\)\?\%(\cTODO\C\s*\)\?beforea\%(sync\)\?$
+	before(async () => {
+		{{_cursor_}}
+	});
+
+^\s*\zs\%(\/\/\s*\)\?\%(\cTODO\C\s*\)\?before\cE\%(ach\)\?$
+	beforeEach(() => {
+		{{_cursor_}}
+	});
+
+^\s*\zs\%(\/\/\s*\)\?\%(\cTODO\C\s*\)\?before\cE\%(ach\)\?a\%(sync\)\?$
+	beforeEach(async () => {
+		{{_cursor_}}
+	});
+
