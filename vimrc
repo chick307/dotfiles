@@ -61,8 +61,11 @@ let g:sonictemplate_postfix_key = '<c-k>'
 " test
 call dein#add('vim-test/vim-test')
 let g:test#strategy = 'dispatch'
+nnoremap <silent> <leader>Ta :TestSuite -strategy=vimterminal<cr>
 nnoremap <silent> <leader>ta :TestSuite<cr>
+nnoremap <silent> <leader>Tf :TestFile -strategy=vimterminal<cr>
 nnoremap <silent> <leader>tf :TestFile<cr>
+nnoremap <silent> <leader>Tt :TestNearest -strategy=vimterminal<cr>
 nnoremap <silent> <leader>tt :TestNearest<cr>
 
 " lsp
