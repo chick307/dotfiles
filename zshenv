@@ -13,11 +13,15 @@ if command -v brew > /dev/null; then
     path_add "$(brew --prefix)/bin"
     path_add "$(brew --prefix)/sbin"
 fi
+path_add "$HOME/.local/opt/cargo/bin"
 path_add "$HOME/.local/opt/go/bin"
 path_add "$HOME/.local/opt/npm/bin"
 path_add "$HOME/.local/opt/pip/bin"
 path_add "$HOME/.local/bin"
 export MANPATH="$HOME/.local/share/man:$MANPATH"
+
+# cargo
+export CARGO_HOME="$HOME/.local/opt/cargo"
 
 # go
 export GOPATH="$HOME/.local/opt/go"

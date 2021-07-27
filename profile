@@ -1,5 +1,8 @@
 _which() { which $@ 2> /dev/null; }
 
+# cargo
+export CARGO_HOME="$HOME/.local/opt/cargo"
+
 # go
 export GOPATH="$HOME/.local/opt/go"
 
@@ -15,6 +18,7 @@ export PATH="$homebrew_prefix/bin:$homebrew_prefix/sbin:$PATH"
 export MANPATH="$homebrew_prefix/share/man:$MANPATH"
 
 # path
+export PATH="$HOME/.local/opt/cargo/bin:$PATH"
 export PATH="$HOME/.local/opt/go/bin:$PATH"
 export PATH="$HOME/.local/opt/npm/bin:$PATH"
 export PATH="$HOME/.local/opt/pip/bin:$PATH"
