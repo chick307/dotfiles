@@ -100,6 +100,7 @@ let g:airline#extensions#lsp#warning_symbol = 'W '
 
 " markdown
 call dein#add('rcmdnk/vim-markdown')
+call dein#add('dbridges/vim-markdown-runner')
 " see http://rcmdnk.github.io/blog/2014/10/30/computer-vim-markdown/
 let g:vim_markdown_frontmatter = 1
 let g:vim_markdown_math = 1
@@ -107,6 +108,8 @@ let g:vim_markdown_initial_foldlevel=255
 let g:vim_markdown_better_folding = 1
 autocmd vimrc FileType markdown setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 autocmd vimrc FileType markdown setlocal colorcolumn=
+autocmd vimrc FileType markdown nnoremap <buffer> <leader>r :MarkdownRunnerInsert<cr>
+autocmd vimrc FileType markdown nnoremap <buffer> <leader>R :MarkdownRunner<cr>
 
 " javascript
 call dein#add('othree/yajs.vim')
