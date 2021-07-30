@@ -38,6 +38,12 @@ call dein#add('tpope/vim-dispatch')
 call dein#add('machakann/vim-highlightedyank')
 let g:highlightedyank_highlight_duration = 100
 
+" quickrun
+call dein#add('thinca/vim-quickrun')
+let g:quickrun_config = {}
+let g:quickrun_config['_'] = { 'runner' : 'vimproc', 'runner/vimproc/updatetime' : 60 }
+nmap <leader>r <plug>(quickrun)
+
 " repeat
 call dein#add('tpope/vim-repeat')
 
@@ -171,15 +177,6 @@ func! s:start_ctrlp()
     execute 'CtrlP'
   endif
 endfunc
-
-" quickrun
-call dein#add('thinca/vim-quickrun')
-let g:quickrun_config = {
-  \ '_' : {
-  \   'runner' : 'vimproc',
-  \   'runner/vimproc/updatetime' : 60
-  \   }
-  \ }
 
 " paste mode
 nnoremap <silent> <leader>p :set paste!<C-m>
