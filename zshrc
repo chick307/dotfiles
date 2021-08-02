@@ -62,6 +62,11 @@ if [[ "$TERM" != "linux" ]] && command -v powerline-shell > /dev/null; then
     install_powerline_precmd
 fi
 
+# vim
+if [[ -n "${VIM_TERMINAL}" ]]; then
+    alias :q=exit
+fi
+
 # zsh
 autoload -U compinit
 compinit

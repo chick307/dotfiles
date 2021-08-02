@@ -99,5 +99,10 @@ export LESS_TERMCAP_us=$(printf "\e[1;32m")
 # rip
 RIP_PATTERN='$debug'
 
+# vim
+if [[ -n "${VIM_TERMINAL}" ]]; then
+    alias :q=exit
+fi
+
 # load local bashrc
 [ -f "$HOME/.local/etc/bashrc" ] && . "$HOME/.local/etc/bashrc"
