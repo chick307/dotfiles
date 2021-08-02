@@ -193,6 +193,7 @@ nnoremap <silent> <leader>b :call <SID>open_shell()<C-m>
 func! s:open_shell()
   terminal ++close
 endfunc
+source $HOME/.vim/rc/terminal-api.vim
 
 " tab
 command! -nargs=? -complete=file E tabnew <args>

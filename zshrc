@@ -64,7 +64,17 @@ fi
 
 # vim
 if [[ -n "${VIM_TERMINAL}" ]]; then
+    function _vim_terminal_api_Tab() {
+        if [[ "$#" = 0 ]]; then
+            echo -ne "\x1b]51;[\"call\",\"Tapi_Tab_New\",[]]\x07"
+        else
+            local file_json="$(echo -n "${1}" | jq -R --slurp .)"
+            echo -ne "\x1b]51;[\"call\",\"Tapi_Tab_Edit\",[${file_json}]]\x07"
+        fi
+    }
+    alias :E=_vim_terminal_api_Tab
     alias :q=exit
+    alias :tabnew=_vim_terminal_api_Tab
 fi
 
 # zsh
