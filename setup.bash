@@ -30,3 +30,5 @@ link vimrc
 link_dir vim
 link zshenv
 link zshrc
+
+link_config efm-langserver/config.yaml
