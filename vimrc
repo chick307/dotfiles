@@ -109,6 +109,8 @@ let g:airline#extensions#lsp#enabled = 1
 let g:airline#extensions#lsp#show_line_numbers = 0
 let g:airline#extensions#lsp#error_symbol = 'E '
 let g:airline#extensions#lsp#warning_symbol = 'W '
+let g:lsp_settings = {}
+let g:lsp_settings['efm-langserver'] = { 'disabled': v:false }
 
 " markdown
 call dein#add('rcmdnk/vim-markdown')
@@ -136,6 +138,7 @@ let g:typescript_indent_disable = 1
 
 " json
 autocmd vimrc FileType json setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
+let g:lsp_settings_filetype_json = ['efm-langserver']
 
 " yaml
 autocmd vimrc FileType yaml setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
