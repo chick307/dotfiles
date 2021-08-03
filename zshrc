@@ -63,6 +63,7 @@ if [[ "$TERM" != "linux" ]] && command -v powerline-shell > /dev/null; then
 fi
 
 # vim
+export EDITOR=vim
 if [[ -n "${VIM_TERMINAL}" ]]; then
     function _vim_terminal_api_Tab() {
         if [[ "$#" = 0 ]]; then

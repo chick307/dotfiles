@@ -77,7 +77,7 @@ let g:airline_left_alt_sep = "\uE0B1"
 
 ## zsh
 
-`~/.zshenv` `~/.zshrc` を管理する。ローカルの設定は `~/.local/etc/zshenv` `~/.local/etc/zshrc`
+`~/.zshenv` `~/.zshrc` `~/.zprofile` を管理する。ローカルの設定は `~/.local/etc/zshenv` `~/.local/etc/zshrc` `~/.local/etc/zprofile`
 
 ## その他
 

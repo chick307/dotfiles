@@ -13,9 +13,6 @@ shopt -s checkjobs
 shopt -s histappend
 shopt -s checkwinsize
 
-# editor
-export EDITOR=vim
-
 # pager
 export PAGER=less
 export LESS=-cRS
@@ -100,6 +97,7 @@ export LESS_TERMCAP_us=$(printf "\e[1;32m")
 RIP_PATTERN='$debug'
 
 # vim
+export EDITOR=vim
 if [[ -n "${VIM_TERMINAL}" ]]; then
     function _vim_terminal_api_Tab() {
         if [[ "$#" = 0 ]]; then
