@@ -18,6 +18,7 @@
     gr = grep -n
     ls = ls-files
     pi = cherry-pick
+    pulla = pull --all
     pullr = pull --rebase
     pushf = push --force-with-lease
     pushu = push --set-upstream
@@ -26,7 +27,9 @@
     ri = rebase -i --keep-empty
     rmc = rm --cached
     rs = restore
+    rsp = restore --patch
     rss = restore --staged
+    rssp = restore --staged --patch
     st = status
     sw = switch
     swc = switch -c
