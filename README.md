@@ -63,7 +63,7 @@ let g:airline_left_alt_sep = "\uE0B1"
 
 `prefix` は `~/.local/opt/npm` に設定され、 `bin` にパスが通される。 `npm i -g` でインストールされたものはそこに置かれる。
 
-勝手にパスの `~` を展開したり、シンボリックリンクを置き換えたりされて面倒くさい。
+`npm login` をすると勝手にパスの `~` を展開されるので直す。 `//registry.npmjs.org/:_authToken=` は `~/.local/opt/npm/etc/npmrc` に書き写しておく。
 
 ## pip
 
