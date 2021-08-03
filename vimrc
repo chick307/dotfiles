@@ -38,6 +38,19 @@ call dein#add('tpope/vim-dispatch')
 call dein#add('machakann/vim-highlightedyank')
 let g:highlightedyank_highlight_duration = 100
 
+" neosnippet
+call dein#add('Shougo/neosnippet')
+call dein#add('prabirshrestha/asyncomplete-neosnippet.vim',
+  \ { 'depends': ['Shougo/neosnippet', 'prabirshrestha/asyncomplete.vim'] })
+call asyncomplete#register_source(asyncomplete#sources#neosnippet#get_source_options({
+  \ 'name': 'neosnippet', 'allowlist': ['*'], 'completor': function('asyncomplete#sources#neosnippet#completor') }))
+let g:neosnippet#snippets_directory='~/.vim/snippets'
+let g:neosnippet#disable_runtime_snippets = { '_': 1 }
+imap <c-k> <plug>(neosnippet_expand_or_jump)
+smap <c-k> <plug>(neosnippet_expand_or_jump)
+smap <expr><tab> neosnippet#expandable_or_jumpable() ? "\<plug>(neosnippet_expand_or_jump)" : "\<tab>"
+xmap <c-k> <plug>(neosnippet_expand_target)
+
 " quickrun
 call dein#add('thinca/vim-quickrun')
 let g:quickrun_config = {}
@@ -62,7 +75,6 @@ call dein#add('itchyny/vim-cursorword')
 " sonictemplate
 call dein#add('mattn/sonictemplate-vim')
 let g:sonictemplate_vim_template_dir = ['~/.vim/template', '~/.local/etc/vim/template']
-let g:sonictemplate_postfix_key = '<c-k>'
 
 " test
 call dein#add('vim-test/vim-test')
@@ -229,6 +241,9 @@ set scrolloff=3
 set noerrorbells visualbell t_vb=
 set nocursorline
 set colorcolumn=121
+if has('conceal')
+  set conceallevel=2 concealcursor=niv
+endif
 
 " disable IME in normal mode
 autocmd vimrc InsertEnter,CmdwinEnter * set noimdisable

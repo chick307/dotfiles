@@ -1,0 +1,78 @@
+snippet promise_lesolve_then_async
+options head
+    Promise.resolve().then(async () => {
+        ${0}
+    });
+
+snippet constructor
+alias ctor
+options head
+    constructor(${1}) {
+        ${0}
+    }
+
+snippet describe
+options head
+    describe('${1}', () => {
+        ${0}
+    });
+
+snippet test
+options head
+    test('${1}', () => {
+        ${0}
+    });
+
+snippet testAsync
+options head
+    test('${1}', async () => {
+        ${0}
+    });
+
+snippet afterAll
+options head
+    afterAll(() => {
+        ${0}
+    });
+
+snippet afterAllAsync
+options head
+    afterAll(async () => {
+        ${0}
+    });
+
+snippet afterEach
+options head
+    afterEach(() => {
+        ${0}
+    });
+
+snippet afterEachAsync
+options head
+    afterEach(async () => {
+        ${0}
+    });
+
+snippet beforeAll
+options head
+    beforeAll(() => {
+        ${0}
+    });
+
+snippet beforeAllAsync
+options head
+    beforeAll(async () => {
+        ${0}
+    });
+
+snippet beforeEach
+options head
+    beforeEach(() => {
+        ${0}
+    });
+
+snippet beforeEachAsync
+options head
+    beforeEach(async () => {
+        ${0}
+    });

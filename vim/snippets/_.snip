@@ -1,0 +1,19 @@
+snippet now
+options word
+    `strftime('%Y-%m-%dT%H:%M:%S%z')`${0}
+
+snippet today
+options word
+    `strftime('%Y-%m-%d')`${0}
+
+snippet time
+options word
+    `strftime('%H:%M:%S')`${0}
+
+snippet pwd
+options word
+    `$PWD`${0}
+
+snippet pwdb
+options word
+    `system('basename "$PWD" | tr -d "\n"')`${0}
