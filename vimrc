@@ -15,7 +15,7 @@ augroup END
 source $HOME/.vim/rc/plugins.vim
 
 " filetypes
-source $HOME/.vim/rc/plugins.vim
+source $HOME/.vim/rc/filetypes.vim
 
 " colorscheme
 call dein#add('lifepillar/vim-solarized8')
