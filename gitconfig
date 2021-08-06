@@ -30,6 +30,7 @@
     rsp = restore --patch
     rss = restore --staged
     rssp = restore --staged --patch
+    showf = show --format=fuller
     st = status
     sw = switch
     swc = switch -c
