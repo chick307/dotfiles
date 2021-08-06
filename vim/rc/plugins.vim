@@ -15,6 +15,7 @@ let g:airline#extensions#branch#format = 2
 
 " asynccomplete
 call dein#add('prabirshrestha/asyncomplete.vim')
+let g:asyncomplete_min_chars = 1
 
 " auto-pairs
 call dein#add('jiangmiao/auto-pairs')
