@@ -58,6 +58,8 @@ vnoremap g$ $
 nnoremap gF gf
 nnoremap <silent> gf :sp<cr>gf
 nnoremap <c-[><c-[><c-[> :nohlsearch<cr>
+nnoremap <silent> <leader># #``:echo '?'.@/<cr>
+nnoremap <silent> <leader>* *``:echo '/'.@/<cr>
 
 " netrw
 nnoremap <silent> <leader>e :Explore<c-m>
@@ -72,16 +74,19 @@ nnoremap <silent> <c-h> gT
 nnoremap <silent> <c-l> gt
 autocmd vimrc FileType netrw nnoremap <buffer> <silent> <c-l> gt
 nnoremap <leader>1 :tabfirst<cr>
+nnoremap <leader>2 :tabfirst<cr>gt
+tnoremap <c-w><leader>1 <c-w>:tabfirst<cr>
+tnoremap <c-w><leader>2 <c-w>:tabfirst<cr>gt
 nnoremap <silent> <c-t><c-h> :-tabmove<cr>
 nnoremap <silent> <c-t><c-l> :+tabmove<cr>
 tnoremap <silent> <c-h> <c-w>:tabprevious<cr>
 tnoremap <silent> <c-l> <c-w>:tabnext<cr>
 
 " terminal
-nnoremap <silent> <leader>b :call <sid>open_shell()<c-m>
-func! s:open_shell()
-  terminal ++close
-endfunc
+nnoremap <silent> <leader>b :terminal ++close<cr>
+nnoremap <silent> <leader>B :tab terminal ++close<cr>
+tnoremap <silent> <c-w><leader>b <c-w>:terminal ++close<cr>
+tnoremap <silent> <c-w><leader>B <c-w>:tab terminal ++close<cr>
 source $HOME/.vim/rc/terminal-api.vim
 
 " settings
