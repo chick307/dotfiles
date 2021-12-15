@@ -27,6 +27,7 @@ link npmignore
 link npmrc
 link profile
 link profile.sh
+link shrc
 link vimrc
 link_dir vim
 link zprofile
