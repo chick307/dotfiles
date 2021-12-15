@@ -18,9 +18,9 @@ source $HOME/.vim/rc/plugins.vim
 source $HOME/.vim/rc/filetypes.vim
 
 " colorscheme
-call dein#add('lifepillar/vim-solarized8')
-autocmd vimrc ColorScheme solarized8 hi! Comment ctermfg=244 ctermbg=NONE cterm=NONE
-autocmd vimrc ColorScheme solarized8 hi! def link gitcommitComment Comment
+call dein#add('altercation/vim-colors-solarized')
+autocmd vimrc ColorScheme solarized hi! LineNr ctermbg=NONE
+autocmd vimrc ColorScheme solarized hi! SignColumn ctermbg=NONE
 set background=dark
 let g:solarized_termtrans = 1
 
@@ -133,4 +133,4 @@ filetype plugin indent on
 if dein#check_install()
   call dein#install()
 endif
-colorscheme solarized8
+colorscheme solarized
