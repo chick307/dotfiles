@@ -16,6 +16,7 @@ function prefix-add() {
     path-prepend MANPATH "${1}/share/man"
 }
 
+prefix-add "/usr"
 prefix-add "/usr/local"
 prefix-add "$HOME/.local"
 
