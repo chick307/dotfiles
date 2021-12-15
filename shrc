@@ -22,6 +22,7 @@ if [[ -n "${VIM_TERMINAL}" ]]; then
     }
     alias :cd=_vim_terminal_api_Cd
     alias :E=_vim_terminal_api_Tab
+    alias :q=exit
     alias :tabnew=_vim_terminal_api_Tab
 fi
 
