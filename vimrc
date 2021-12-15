@@ -83,6 +83,7 @@ tnoremap <silent> <c-h> <c-w>:tabprevious<cr>
 tnoremap <silent> <c-l> <c-w>:tabnext<cr>
 
 " terminal
+autocmd vimrc TerminalWinOpen * setlocal ambiwidth=single nonumber signcolumn=no
 nnoremap <silent> <leader>b :terminal ++close<cr>
 nnoremap <silent> <leader>B :tab terminal ++close<cr>
 tnoremap <silent> <c-w><leader>b <c-w>:terminal ++close<cr>
