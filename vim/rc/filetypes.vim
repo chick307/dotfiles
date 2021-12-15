@@ -36,6 +36,7 @@ autocmd vimrc FileType sh setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=
 " typescript
 call dein#add('leafgarland/typescript-vim')
 let g:typescript_indent_disable = 1
+let g:quickrun_config['typescript'] = {}
 
 " vim script
 autocmd vimrc FileType vim setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
