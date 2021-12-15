@@ -9,6 +9,9 @@ function _cdp() {
 # vim
 export EDITOR=vim
 if [[ -n "${VIM_TERMINAL}" ]]; then
+    function _vim_terminal_api_Cd() {
+        ( cd "$@" && echo -ne "\x1b]51;[\"call\",\"Tapi_Cd\",[$(echo "$PWD" | jq -R --slurp .)]]\x07" )
+    }
     function _vim_terminal_api_Tab() {
         if [[ "$#" = 0 ]]; then
             echo -ne "\x1b]51;[\"call\",\"Tapi_Tab_New\",[]]\x07"
@@ -17,6 +20,7 @@ if [[ -n "${VIM_TERMINAL}" ]]; then
             echo -ne "\x1b]51;[\"call\",\"Tapi_Tab_Edit\",[${file_json}]]\x07"
         fi
     }
+    alias :cd=_vim_terminal_api_Cd
     alias :E=_vim_terminal_api_Tab
     alias :tabnew=_vim_terminal_api_Tab
 fi
