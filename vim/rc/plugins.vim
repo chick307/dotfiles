@@ -70,6 +70,7 @@ call dein#add('mattn/vim-lsp-settings')
 call dein#add('prabirshrestha/asyncomplete-lsp.vim')
 let g:lsp_diagnostics_echo_cursor = 1
 let g:lsp_document_code_action_signs_enabled = 0
+let g:lsp_untitled_buffer_enabled = 0
 nmap <leader>a <plug>(lsp-code-action)
 nmap <leader>d <plug>(lsp-document-diagnostics)
 nmap 1f <plug>(lsp-document-format)
