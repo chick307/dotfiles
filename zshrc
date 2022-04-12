@@ -62,12 +62,11 @@ if [[ "$TERM" != "linux" ]] && command -v powerline-shell > /dev/null; then
     install_powerline_precmd
 fi
 
-# shrc
-source "$HOME/.shrc"
-
 # zsh
 autoload -U compinit
 compinit
 
-# local zshrc
+# rc files
+source "$HOME/.shrc"
 [[ -f "$HOME/.local/etc/zshrc" ]] && source "$HOME/.local/etc/zshrc"
+[[ -f "$HOME/.local/etc/shrc" ]] && source "$HOME/.local/etc/shrc"
