@@ -96,8 +96,7 @@ export LESS_TERMCAP_us=$(printf "\e[1;32m")
 # rip
 RIP_PATTERN='$debug'
 
-# shrc
+# rc files
 source "$HOME/.shrc"
-
-# load local bashrc
-[ -f "$HOME/.local/etc/bashrc" ] && . "$HOME/.local/etc/bashrc"
+[[ -f "$HOME/.local/etc/bashrc" ]] && source "$HOME/.local/etc/bashrc"
+[[ -f "$HOME/.local/etc/shrc" ]] && source "$HOME/.local/etc/shrc"
