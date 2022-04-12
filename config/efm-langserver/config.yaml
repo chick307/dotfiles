@@ -3,10 +3,31 @@ root-markers:
   - .git/
 
 tools:
+  eslint: &eslint
+    lint-command: 'npx eslint -f visualstudio --stdin --stdin-filename ${INPUT}'
+    lint-ignore-exit-code: true
+    lint-stdin: true
+    lint-formats:
+      - "%f(%l,%c): %tarning %m"
+      - "%f(%l,%c): %rror %m"
+
   json-jq: &json-jq
     format-command: 'jq .'
     format-stdin: true
 
 languages:
+  javascript:
+    - <<: *eslint
+
+  javascriptreact:
+    - <<: *eslint
+
   json:
     - <<: *json-jq
+
+  typescript:
+    - <<: *eslint
+
+  typescriptreact:
+    - <<: *eslint
+
