@@ -75,10 +75,13 @@ nmap <leader>d <plug>(lsp-document-diagnostics)
 nmap 1f <plug>(lsp-document-format)
 vmap 1f <plug>(lsp-document-format)
 nmap 1r <plug>(lsp-rename)
-nmap gd :sp<cr><plug>(lsp-definition)
-nmap gi :sp<cr><plug>(lsp-implementation)
-nmap gr :sp<cr><plug>(lsp-references)
-nmap gt :sp<cr><plug>(lsp-type-definition)
+nnoremap gd :topleft :LspDefinition<cr>
+nmap gD <plug>(lsp-definition)
+nnoremap gi :topleft :LspImplementation<cr>
+nmap gI <plug>(lsp-implementation)
+nmap gr <plug>(lsp-references)
+nnoremap gt :topleft :LspTypeDefinition<cr>
+nmap gT <plug>(lsp-type-definition)
 nmap ]] <plug>(lsp-next-diagnostic)
 nmap [[ <plug>(lsp-previous-diagnostic)
 nmap <leader>h <plug>(lsp-hover)

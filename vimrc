@@ -56,7 +56,7 @@ nnoremap g$ $
 vnoremap g0 0
 vnoremap g$ $
 nnoremap gF gf
-nnoremap <silent> gf :sp<cr>gf
+nnoremap <silent> gf <c-w>f
 nnoremap <c-[><c-[><c-[> :nohlsearch<cr>
 nnoremap <silent> <leader># #``:echo '?'.@/<cr>
 nnoremap <silent> <leader>* *``:echo '/'.@/<cr>
