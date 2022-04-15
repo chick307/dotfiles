@@ -1,5 +1,3 @@
-_which() { which $@ 2> /dev/null; }
-
 [[ -z $GOPATH ]] && . .profile
 
 # bash
@@ -18,10 +16,10 @@ export PAGER=less
 export LESS=-cRS
 
 # lesspipe
-[ -x "$(_which lesspipe)" ] && eval "$(SHELL=/bin/sh lesspipe)"
+[ -x "$(command -v lesspipe)" ] && eval "$(SHELL=/bin/sh lesspipe)"
 
 # dircolors
-if [ -x "$(_which dircolors)" ]; then
+if [ -x "$(command -v dircolors)" ]; then
     eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
 fi
 
@@ -30,13 +28,13 @@ update-ps1() { export PS1='\h:\w $ '; }
 export PROMPT_COMMAND="update-ps1"
 
 # powerline
-if [[ "$(_which powerline-shell)" ]]; then
+if [[ "$(command -v powerline-shell)" ]]; then
     update-ps1-powerline() { export PS1="$(powerline-shell)"; }
     export PROMPT_COMMAND="update-ps1-powerline"
 fi
 
 # direnv
-[ -x "$(_which direnv)" ] && eval "$(direnv hook bash)"
+[ -x "$(command -v direnv)" ] && eval "$(direnv hook bash)"
 
 # ls
 case "${OSTYPE}" in
@@ -60,11 +58,11 @@ alias egrep='egrep --color=auto'
 # git
 alias gti=git
 peco-git-refs() { git for-each-ref --format='%(refname)' refs/{heads,tags,remotes} | grep -v '^refs/remotes/.*/HEAD$' | sed -e 's@^refs/\(heads\|remotes\|tags\)/@@' | peco --query "$*"; }
-export DIFF_HIGHLIGHT=$(_which diff-highlight || _which cat)
-[[ ! -x $(_which diff-highlight) && -x $(brew --prefix)/share/git-core/contrib/diff-highlight/diff-highlight ]] && ln -sfn "$(brew --prefix)/share/git-core/contrib/diff-highlight/diff-highlight" ~/.local/bin/ && export DIFF_HIGHLIGHT=$(_which diff-highlight)
+export DIFF_HIGHLIGHT=$(command -v diff-highlight || command -v cat)
+[[ ! -x $(command -v diff-highlight) && -x $(brew --prefix)/share/git-core/contrib/diff-highlight/diff-highlight ]] && ln -sfn "$(brew --prefix)/share/git-core/contrib/diff-highlight/diff-highlight" ~/.local/bin/ && export DIFF_HIGHLIGHT=$(command -v diff-highlight)
 
 # bash completion
-[ -x "$(_which brew)" ] && [ -f "$(brew --prefix)/etc/bash_completion" ] && \
+[ -x "$(command -v brew)" ] && [ -f "$(brew --prefix)/etc/bash_completion" ] && \
     . "$(brew --prefix)/etc/bash_completion"
 
 # history
