@@ -65,6 +65,7 @@ fi
 # zsh
 export HISTSIZE=2000
 export SAVEHIST=2000
+setopt extendedglob
 setopt hist_ignore_dups
 autoload -U compinit
 compinit
