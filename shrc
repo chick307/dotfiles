@@ -1,8 +1,9 @@
 # cd
-function _cdp() {
-    local next_dir="$(ls -a | peco)"
-    if [[ "${next_dir}" != "." ]]; then
-        cd "${next_dir}"
+function cdp() {
+    local nwd="$(find . -maxdepth 2 -type d | cat - <(echo .) <(echo ..) | sort | peco --query "$*")"
+    if [[ -n $nwd && $nwd != . ]]; then
+        echo ">> cd \"$nwd\""
+        cd "$nwd"
     fi
 }
 
