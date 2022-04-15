@@ -2,16 +2,16 @@ _which() { which $@ 2> /dev/null; }
 
 [[ -z $GOPATH ]] && . .profile
 
-# shell
-export HISTSIZE=2000
-export HISTFILESIZE=2000
+# bash
 export HISTCONTROL=ignoreboth
+export HISTFILESIZE=2000
 export HISTIGNORE=exit:ls
+export HISTSIZE=2000
+shopt -s checkjobs
+shopt -s checkwinsize
 shopt -s extglob
 shopt -s globstar
-shopt -s checkjobs
 shopt -s histappend
-shopt -s checkwinsize
 
 # pager
 export PAGER=less
