@@ -69,6 +69,14 @@ setopt hist_ignore_dups
 autoload -U compinit
 compinit
 
+function peco-history-selection() {
+    BUFFER=`history -n 1 | tail -r  | awk '!a[$0]++' | peco --query "$LBUFFER"`
+    CURSOR=$#BUFFER
+    zle reset-prompt
+}
+zle -N peco-history-selection
+bindkey '^R' peco-history-selection
+
 # rc files
 source "$HOME/.shrc"
 [[ -f "$HOME/.local/etc/zshrc" ]] && source "$HOME/.local/etc/zshrc"
