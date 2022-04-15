@@ -92,7 +92,6 @@ let g:airline#extensions#lsp#show_line_numbers = 0
 let g:airline#extensions#lsp#error_symbol = 'E '
 let g:airline#extensions#lsp#warning_symbol = 'W '
 let g:lsp_settings = {}
-let g:lsp_settings['efm-langserver'] = { 'disabled': v:false }
 
 " neosnippet
 call dein#add('Shougo/neosnippet')
